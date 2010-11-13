@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_22" class="java.beans.XMLDecoder"> 
+ <object class="com.horstmann.violet.ClassDiagramGraph"> 
+  <void method="addNode"> 
+   <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>+ a : Number
++ b : Number
++ c : Number
++ d : Number
++ tx : Number
++ ty : Number</string> 
+     </void> 
+    </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>TransformationMatrix2D(  a : Number = 1, b : Number = 0, c : Number = 0, d : Number = 1, tx : Number = 0, ty : Number = 0 )
++ clone() : TransformationMatrix2D
++ concat( m : TransformationMatrix2D )
++ equals( m : TransformationMatrix2D ) : Boolean
+$ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio : Number ) : TransformationMatrix2D
++ interpolateTo( m2 : TransformationMatrix2D, ratio : Number )
++ invert()
++ reset( a : Number = 1, b : Number = 0, c : Number = 0, d : Number = 1, tx : Number = 0, ty : Number = 0)
++ rotate( q : Number )
++ scale( sx : Number, sy : Number )
++ shear( sx : Number, sy : Number )
++ translate( tx : Number, ty : Number )</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>TransformationMatrix2D</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>83.0</double> 
+     <double>379.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode1" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>+ bottomRight : Point2D
++ topLeft : Point2D
++ height : Number
++ width : Number
++ x : Number
++ y : Number</string> 
+     </void> 
+    </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>Bounds2D( x : Number = 0, y : Number = 0, wid : Number, hei : Number )
++ clone() : Bounds2D
++ containsPoint( pt : Point2D ) : Boolean
++ containsBound( b : Bounds2D ) : Boolean
++ expand( pt : Point2D )
++ inflate( x : Number, y : Number )
++ intersects( b : Bounds2D ) : Boolean
++ intersection( b : Bounds2D ) : Bounds2D
++ reset( x : Number = 0, y : Number = 0, wid : Number, hei : Number )
++ union( b : Bounds2D ) : Bounds2D</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>Bounds2D</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>444.0</double> 
+     <double>52.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object class="com.horstmann.violet.PackageNode"> 
+    <void method="addChild"> 
+     <object idref="ClassNode0"/> 
+    </void> 
+    <void method="addChild"> 
+     <object idref="ClassNode1"/> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ x : Number
++ y : Number</string> 
+       </void> 
+      </void> 
+      <void property="methods"> 
+       <void property="text"> 
+        <string>Point2D( x : Number = 0, y : Number = 0 )
++ clone() : Point2D
+$ + distance( p1 : Point, p2 : Point ) : Number
++ equals( point : Point2D ) : Boolean
+$ + interpolate( p1 : Point2D, p2 : Point2D, ratio : Number ) : Point2D
++ interpolateTo( p2 : Point2D, ratio : Number )
+$ + midpoint( p1 : Point2D, p2 : Point2D ) : Point2D
++ reset( x : Number = 0, y :Number = 0 )
++ transform( matrix : TransformationMatrix2D )</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>Point2D</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="name"> 
+     <string>geom</string> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>20.0</double> 
+     <double>20.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode2"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>32.0</double> 
+     <double>51.0</double> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

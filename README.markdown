@@ -1,21 +1,24 @@
 # SceneGraph.js #
 
-JavaScript implementation of a [Scene Graph](http://en.wikipedia.org/wiki/Scene_graph) (a.k.a. display list) initially targeting HTML5 canvas rendering but with plans to add support for other rendering engines later if required.
+JavaScript implementation of a [Scene Graph](http://en.wikipedia.org/wiki/Scene_graph) (a.k.a. display list) targeting HTML5 canvas rendering.
 
 ## Why? ##
 
  - HTML5 canvas doesn't have a build-in hierarchy tree.
- - JavaScript engines are getting faster each day and HTML canvas is starting to be hardware accelerated, which means it could potentially be fast enough for complex interactions.
+ - JavaScript engines are getting faster each day and HTML canvas is starting to be hardware accelerated in some browsers, which means it could potentially be fast enough for complex interactions.
 
 ## Goals / Desired Features ##
 
  - Translate, rotate, scale elements at runtime (bitmap and/or vectors).
- - Individual event dispatching per element.
- - Event bubbling.
- - Work similar to the DOM and Flash DisplayList when it makes sense.
+ - Add/remove/swap "nodes" at runtime.
+ - Messaging system support (DOM2 Event or Signals).
+ - Individual *event* dispatching per element and *bubbling* (maybe without capturing phase).
+ - Clean API.
+ - Work similar to the DOM Tree and Flash DisplayList when it makes sense.
  - Use same API as native canvas commands when it makes sense.
  - Self-contained.
  - Be fast but without compromising code structure/readability.
+ - Favor interfaces over inheritance.
  
 ## Notes ##
 
