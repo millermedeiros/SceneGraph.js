@@ -5,23 +5,18 @@
    <object class="com.horstmann.violet.PackageNode"> 
     <void method="addChild"> 
      <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
-      <void property="name"> 
-       <void property="text"> 
-        <string>CanvasRenderer</string> 
-       </void> 
-      </void> 
-     </object> 
-    </void> 
-    <void method="addChild"> 
-     <object id="ClassNode1" class="com.horstmann.violet.ClassNode"> 
       <void property="attributes"> 
        <void property="text"> 
-        <string>+ renderStack : Array.&lt;IRenderable&gt;</string> 
+        <string># renderStack : Array.&lt;IRenderable&gt;
+# targetContext : CanvasRenderingContext2D
+# targetScene : IScene</string> 
        </void> 
       </void> 
       <void property="methods"> 
        <void property="text"> 
-        <string>$ render()</string> 
+        <string>+ render()
+# clearStack()
++ addToStack( item : IRenderable )</string> 
        </void> 
       </void> 
       <void property="name"> 
@@ -32,6 +27,47 @@ ISceneRenderer</string>
       </void> 
      </object> 
     </void> 
+    <void method="addChild"> 
+     <object id="PackageNode0" class="com.horstmann.violet.PackageNode"> 
+      <void method="addChild"> 
+       <object id="ClassNode1" class="com.horstmann.violet.ClassNode"> 
+        <void property="attributes"> 
+         <void property="text"> 
+          <string>- bufferCanvas : HTMLCanvasElement
+- bufferContext : CanvasRenderingContext2D</string> 
+         </void> 
+        </void> 
+        <void property="methods"> 
+         <void property="text"> 
+          <string>CanvasRenderer2D( targetScene : IScene )</string> 
+         </void> 
+        </void> 
+        <void property="name"> 
+         <void property="text"> 
+          <string>CanvasRenderer2D</string> 
+         </void> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="addChild"> 
+       <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
+        <void property="methods"> 
+         <void property="text"> 
+          <string>+ plot( target : CanvasRenderingContext2D, commands : Array.&lt;?&gt; )</string> 
+         </void> 
+        </void> 
+        <void property="name"> 
+         <void property="text"> 
+          <string>CommandsParser</string> 
+         </void> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>canvas</string> 
+      </void> 
+     </object> 
+    </void> 
     <void property="name"> 
      <string>render</string> 
     </void> 
@@ -39,16 +75,7 @@ ISceneRenderer</string>
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
      <double>20.0</double> 
-     <double>30.0</double> 
-    </void> 
-   </object> 
-  </void> 
-  <void method="addNode"> 
-   <object idref="ClassNode1"/> 
-   <object class="java.awt.geom.Point2D$Double"> 
-    <void method="setLocation"> 
-     <double>32.0</double> 
-     <double>56.0</double> 
+     <double>20.0</double> 
     </void> 
    </object> 
   </void> 
@@ -56,8 +83,35 @@ ISceneRenderer</string>
    <object idref="ClassNode0"/> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>81.0</double> 
-     <double>188.0</double> 
+     <double>31.0</double> 
+     <double>46.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="PackageNode0"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>30.0</double> 
+     <double>220.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode1"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>43.0</double> 
+     <double>253.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode2"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>348.0</double> 
+     <double>260.0</double> 
     </void> 
    </object> 
   </void> 
@@ -73,8 +127,20 @@ ISceneRenderer</string>
      <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
    </object> 
-   <object idref="ClassNode0"/> 
    <object idref="ClassNode1"/> 
+   <object idref="ClassNode0"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode1"/> 
+   <object idref="ClassNode2"/> 
   </void> 
  </object> 
 </java> 

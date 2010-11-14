@@ -3,14 +3,38 @@
  <object class="com.horstmann.violet.ClassDiagramGraph"> 
   <void method="addNode"> 
    <object class="com.horstmann.violet.PackageNode"> 
+    <void method="addChild"> 
+     <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
+      <void property="methods"> 
+       <void property="text"> 
+        <string>$ + getElementsUnderPoint( context : ISceneElementContainer, p : Point2D) : Array.&lt;ISceneElement&gt;
+$ + getElementsUnderBounds( context : ISceneElementContainer, b : Bounds2D ) : Array.&lt;ISceneElement&gt;</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>SceneUtils</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
     <void property="name"> 
      <string>utils</string> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
+     <double>10.0</double> 
+     <double>10.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode0"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
      <double>22.0</double> 
-     <double>18.0</double> 
+     <double>43.0</double> 
     </void> 
    </object> 
   </void> 

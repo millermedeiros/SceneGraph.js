@@ -37,8 +37,8 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>83.0</double> 
-     <double>379.0</double> 
+     <double>85.0</double> 
+     <double>373.0</double> 
     </void> 
    </object> 
   </void> 
@@ -58,6 +58,7 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
      <void property="text"> 
       <string>Bounds2D( x : Number = 0, y : Number = 0, wid : Number, hei : Number )
 + clone() : Bounds2D
++ contains( x : Number, y : Number) : Boolean
 + containsPoint( pt : Point2D ) : Boolean
 + containsBound( b : Bounds2D ) : Boolean
 + expand( pt : Point2D )
@@ -76,8 +77,8 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>444.0</double> 
-     <double>52.0</double> 
+     <double>442.0</double> 
+     <double>51.0</double> 
     </void> 
    </object> 
   </void> 

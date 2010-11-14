@@ -11,8 +11,8 @@
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>949.0</double> 
-     <double>660.0</double> 
+     <double>969.0</double> 
+     <double>680.0</double> 
     </void> 
    </object> 
   </void> 
@@ -41,8 +41,8 @@ ISceneElement</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>793.0</double> 
-     <double>72.0</double> 
+     <double>813.0</double> 
+     <double>92.0</double> 
     </void> 
    </object> 
   </void> 
@@ -56,6 +56,7 @@ ISceneElement</string>
     <void property="methods"> 
      <void property="text"> 
       <string>+ addChild( el : ISceneElement,  index : int = null ) : ISceneElement
++ containsChild( el : ISceneElement ) : Boolean
 + getChildByIndex( index : int ) : ISceneElement
 + getChildIndex( el : ISceneElement ) : ISceneElement
 + removeChild( el : ISceneElement ) : ISceneElement
@@ -75,8 +76,8 @@ ISceneElementContainer</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>1063.0</double> 
-     <double>72.0</double> 
+     <double>1083.0</double> 
+     <double>92.0</double> 
     </void> 
    </object> 
   </void> 
@@ -91,8 +92,8 @@ Graphics [?]</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>139.0</double> 
-     <double>576.0</double> 
+     <double>159.0</double> 
+     <double>596.0</double> 
     </void> 
    </object> 
   </void> 
@@ -126,8 +127,8 @@ IRenderable</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>427.0</double> 
-     <double>69.0</double> 
+     <double>447.0</double> 
+     <double>89.0</double> 
     </void> 
    </object> 
   </void> 
@@ -141,8 +142,8 @@ IRenderable</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>1170.0</double> 
-     <double>797.0</double> 
+     <double>1190.0</double> 
+     <double>817.0</double> 
     </void> 
    </object> 
   </void> 
@@ -161,8 +162,8 @@ IRenderable</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>117.0</double> 
-     <double>415.0</double> 
+     <double>137.0</double> 
+     <double>435.0</double> 
     </void> 
    </object> 
   </void> 
@@ -176,8 +177,8 @@ IRenderable</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>976.0</double> 
-     <double>504.0</double> 
+     <double>996.0</double> 
+     <double>524.0</double> 
     </void> 
    </object> 
   </void> 
@@ -215,8 +216,7 @@ IRenderable</string>
 + renderer : ISceneRenderer
 + root : ISceneElementContainer
 + scaleMode : String
-- targetCanvas : HTMLCanvasElement
-- targetContext : CanvasRenderingContext2D
++ targetCanvas : HTMLCanvasElement
 + width : Number</string> 
        </void> 
       </void> 
@@ -254,7 +254,7 @@ IInteractiveSceneElement</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>50.0</double> 
+     <double>20.0</double> 
      <double>20.0</double> 
     </void> 
    </object> 
@@ -263,7 +263,7 @@ IInteractiveSceneElement</string>
    <object idref="ClassNode8"/> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>63.0</double> 
+     <double>33.0</double> 
      <double>46.0</double> 
     </void> 
    </object> 
@@ -272,7 +272,7 @@ IInteractiveSceneElement</string>
    <object idref="ClassNode9"/> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>631.0</double> 
+     <double>601.0</double> 
      <double>640.0</double> 
     </void> 
    </object> 
