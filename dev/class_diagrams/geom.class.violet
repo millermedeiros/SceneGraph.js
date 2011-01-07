@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.6.0_22" class="java.beans.XMLDecoder"> 
+<java version="1.6.0_17" class="java.beans.XMLDecoder"> 
  <object class="com.horstmann.violet.ClassDiagramGraph"> 
   <void method="addNode"> 
    <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
@@ -37,8 +37,8 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>85.0</double> 
-     <double>373.0</double> 
+     <double>93.0</double> 
+     <double>354.0</double> 
     </void> 
    </object> 
   </void> 
@@ -61,7 +61,7 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
 + contains( x : Number, y : Number) : Boolean
 + containsPoint( pt : Point2D ) : Boolean
 + containsBound( b : Bounds2D ) : Boolean
-+ expand( pt : Point2D )
++ include( pt : Point2D )
 + inflate( x : Number, y : Number )
 + intersects( b : Bounds2D ) : Boolean
 + intersection( b : Bounds2D ) : Bounds2D
@@ -77,8 +77,8 @@ $ + interpolate( m1 : TransformationMatrix2D, m2 : TransformationMatrix2D, ratio
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>442.0</double> 
-     <double>51.0</double> 
+     <double>467.0</double> 
+     <double>54.0</double> 
     </void> 
    </object> 
   </void> 

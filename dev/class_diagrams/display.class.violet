@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.6.0_22" class="java.beans.XMLDecoder"> 
+<java version="1.6.0_17" class="java.beans.XMLDecoder"> 
  <object class="com.horstmann.violet.ClassDiagramGraph"> 
   <void method="addNode"> 
    <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
     <void property="name"> 
      <void property="text"> 
-      <string>InteractiveSceneElement</string> 
+      <string>InteractiveSceneElement2D</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>969.0</double> 
-     <double>680.0</double> 
+     <double>1005.0</double> 
+     <double>700.0</double> 
     </void> 
    </object> 
   </void> 
@@ -21,9 +21,7 @@
     <void property="attributes"> 
      <void property="text"> 
       <string>+ height : Number
-+ parent : ISceneElementContainer
 + rotation : Number = 0
-+ root : ISceneElementContainer
 + scaleX : Number = 1
 + scaleY : Number = 1
 + scene : IScene
@@ -35,14 +33,14 @@
     <void property="name"> 
      <void property="text"> 
       <string>«interface»
-ISceneElement</string> 
+ISceneElement2D</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>813.0</double> 
-     <double>92.0</double> 
+     <double>1002.0</double> 
+     <double>207.0</double> 
     </void> 
    </object> 
   </void> 
@@ -76,24 +74,49 @@ ISceneElementContainer</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>1083.0</double> 
+     <double>1666.0</double> 
      <double>92.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
+    <void property="attributes"> 
+     <void property="text"> 
+      <string>~ target : IRenderable</string> 
+     </void> 
+    </void> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>+ beginPath()
++ closePath()
++ setFillStyle( style : string )
++ fill()
++ setStrokeStyle( style : string )
++ stroke()
++ clip()
++ moveTo( x : Number, y : Number )
++ lineTo( x : Number, y : Number )
++ quadraticCurveTo( cpx : Number, cpy : Number, x : Number, y : Number )
++ bezierCurveTo( cp1x : Number, cp1x : Number, cp2x : Number, cp2y : Number, x : Number, y : Number )
++ arcTo( x1 : Number, y1 : Number, x2 : Number, y2 : number, radius : Number )
++ arc( x : Number, y :  Number, radius : Number, startAngle : Number, endAngle : Number, anticlockwise : Boolean )
++ rect( x : Number, y : Number, width : Number, height : Number)
++ circ( x : Number, y : Number, radius : Number )
++ ellipse( x : Number, y : Number, width : Number, height : Number )</string> 
+     </void> 
+    </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Context2D [?]
-Graphics [?]</string> 
+      <string>«interface»
+IGraphics2D</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>159.0</double> 
-     <double>596.0</double> 
+     <double>32.0</double> 
+     <double>295.0</double> 
     </void> 
    </object> 
   </void> 
@@ -102,14 +125,13 @@ Graphics [?]</string>
     <void property="attributes"> 
      <void property="text"> 
       <string>+ alpha : Number = 1
-+ blendMode : String
-+ imageData : Array.&lt;uint&gt;
-+ cacheAsBitmap : Boolean = false
 + commands : Array.&lt;?&gt;
-+ filters : Array.&lt;IFilter&gt;
++ visible : Boolean = true
 + mask : IRenderable
-+ transformationMatrix : TransformationMatrix2D
-+ visible : Boolean = true</string> 
++ maskMode : string
++ transformationMatrix : ITransformationMatrix
++ blendMode : String
++ filters : Array.&lt;IFilter&gt;</string> 
      </void> 
     </void> 
     <void property="methods"> 
@@ -127,8 +149,8 @@ IRenderable</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>447.0</double> 
-     <double>89.0</double> 
+     <double>472.0</double> 
+     <double>50.0</double> 
     </void> 
    </object> 
   </void> 
@@ -136,14 +158,14 @@ IRenderable</string>
    <object id="ClassNode5" class="com.horstmann.violet.ClassNode"> 
     <void property="name"> 
      <void property="text"> 
-      <string>SceneElementContainer</string> 
+      <string>SceneElementContainer2D</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>1190.0</double> 
-     <double>817.0</double> 
+     <double>1448.0</double> 
+     <double>934.0</double> 
     </void> 
    </object> 
   </void> 
@@ -151,19 +173,19 @@ IRenderable</string>
    <object id="ClassNode6" class="com.horstmann.violet.ClassNode"> 
     <void property="methods"> 
      <void property="text"> 
-      <string>Scene2D( canvas : HTMLCanvasElement, root : ISceneElementContainer, fps : uint = 31, bgColor : CSSColorString )</string> 
+      <string>Scene( canvas : HTMLCanvasElement, bgColor : CSSColorString = &quot;rgba(0,0,0,0)&quot;, fps : uint = 31 )</string> 
      </void> 
     </void> 
     <void property="name"> 
      <void property="text"> 
-      <string>Scene2D</string> 
+      <string>Scene</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>137.0</double> 
-     <double>435.0</double> 
+     <double>393.0</double> 
+     <double>982.0</double> 
     </void> 
    </object> 
   </void> 
@@ -171,14 +193,14 @@ IRenderable</string>
    <object id="ClassNode7" class="com.horstmann.violet.ClassNode"> 
     <void property="name"> 
      <void property="text"> 
-      <string>SceneElement</string> 
+      <string>SceneElement2D</string> 
      </void> 
     </void> 
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>996.0</double> 
-     <double>524.0</double> 
+     <double>1005.0</double> 
+     <double>449.0</double> 
     </void> 
    </object> 
   </void> 
@@ -213,11 +235,14 @@ IRenderable</string>
 + backgroundColor : CSSColorString
 + height : Number
 + frameRate : uint = 31
++ mouseX : Number
++ mouseY : Number
 + renderer : ISceneRenderer
 + root : ISceneElementContainer
 + scaleMode : String
 + targetCanvas : HTMLCanvasElement
-+ width : Number</string> 
++ width : Number
++ beforeRendered : Signal</string> 
        </void> 
       </void> 
       <void property="name"> 
@@ -237,13 +262,114 @@ IScene</string>
        <void property="text"> 
         <string>+ mouseEnabled : Boolean = true
 + useHandCursor : Boolean = false
-+ hitBounds : Boolean = true</string> 
++ hitBounds : Boolean = true
++ mouseX : Number
++ mouseY : Number</string> 
        </void> 
       </void> 
       <void property="name"> 
        <void property="text"> 
         <string>«interface»
 IInteractiveSceneElement</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode10" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ imageData : ImageData
++ cacheAsBitmap : Boolean = false</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>IBitmapCacheable</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode11" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ mouseChildren : Boolean = true</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>«interface»
+IInteractiveSceneContainer</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode12" class="com.horstmann.violet.ClassNode"> 
+      <void property="methods"> 
+       <void property="text"> 
+        <string>+ Bitmap2D( src : string = null )
++ drawImage( img : &lt;HTMLImageElement, HTMLCanvasElement, HTMLVideoElement&gt;, x, y, wid, hei )
++ getImageData( x : Number, y : Number, wid : Number, hei : Number ) : ImageData
++ putImageData( imgData : ImageData, dx, dy, dirtyX, dirtyY, dirtyWid, dirtyHei  )</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>Bitmap2D</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode13" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ graphics : IGraphics2D</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>Shape2D</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode14" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ width : uint
++ height : uint
++ data : Array.&lt;uint&gt;</string> 
+       </void> 
+      </void> 
+      <void property="methods"> 
+       <void property="text"> 
+        <string>+ createFromContext( context : CanvasRenderingContext2D )
++ clone()</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>ImageData</string> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void method="addChild"> 
+     <object id="ClassNode15" class="com.horstmann.violet.ClassNode"> 
+      <void property="attributes"> 
+       <void property="text"> 
+        <string>+ parent : ISceneElementContainer
++ root : ISceneElementContainer</string> 
+       </void> 
+      </void> 
+      <void property="name"> 
+       <void property="text"> 
+        <string>«interface»
+ISceneElement</string> 
        </void> 
       </void> 
      </object> 
@@ -263,8 +389,8 @@ IInteractiveSceneElement</string>
    <object idref="ClassNode8"/> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>33.0</double> 
-     <double>46.0</double> 
+     <double>40.0</double> 
+     <double>901.0</double> 
     </void> 
    </object> 
   </void> 
@@ -272,8 +398,62 @@ IInteractiveSceneElement</string>
    <object idref="ClassNode9"/> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>601.0</double> 
-     <double>640.0</double> 
+     <double>691.0</double> 
+     <double>675.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode10"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>32.0</double> 
+     <double>101.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode11"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1799.0</double> 
+     <double>867.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode12"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>1190.0</double> 
+     <double>451.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode13"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>778.0</double> 
+     <double>494.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode14"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>131.0</double> 
+     <double>686.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object idref="ClassNode15"/> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>973.0</double> 
+     <double>71.0</double> 
     </void> 
    </object> 
   </void> 
@@ -342,30 +522,6 @@ IInteractiveSceneElement</string>
     <void property="endArrowHead"> 
      <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
     </void> 
-   </object> 
-   <object idref="ClassNode1"/> 
-   <object idref="ClassNode4"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
-    </void> 
-   </object> 
-   <object idref="ClassNode2"/> 
-   <object idref="ClassNode1"/> 
-  </void> 
-  <void method="connect"> 
-   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
-    <void property="bentStyle"> 
-     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
-    </void> 
-    <void property="endArrowHead"> 
-     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
-    </void> 
     <void property="lineStyle"> 
      <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
     </void> 
@@ -384,6 +540,93 @@ IInteractiveSceneElement</string>
    </object> 
    <object idref="ClassNode5"/> 
    <object idref="ClassNode0"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode5"/> 
+   <object idref="ClassNode11"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode4"/> 
+   <object idref="ClassNode10"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode12"/> 
+   <object idref="ClassNode7"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode13"/> 
+   <object idref="ClassNode7"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode2"/> 
+   <object idref="ClassNode15"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode15"/> 
+   <object idref="ClassNode4"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="bentStyle"> 
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/> 
+    </void> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode1"/> 
+   <object idref="ClassNode15"/> 
   </void> 
  </object> 
 </java> 
